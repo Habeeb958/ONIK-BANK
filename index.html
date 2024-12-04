@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONIK Bank</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="signupPage" class="container">
+        <h2>ONIK Bank - Sign Up</h2>
+        <div id="message" style="margin-top: 10px; color: darkgreen;"></div>
+        <form id="signUpForm">
+            <div class="input-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" required>
+            </div>
+            <div class="input-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+            </div>
+            <div class="input-group">
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="text" id="phoneNumber" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+            </div>
+            <div class="input-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" required>
+            </div>
+            <button type="submit" id="signUpBtn">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="#" onclick="showLoginPage()">Login</a></p>
+    </div>
+
+    <div id="loginPage" class="container" style="display:none;">
+        <h2>ONIK Bank - Login</h2>
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="loginEmail">Email:</label>
+                <input type="email" id="loginEmail" required>
+            </div>
+            <div class="input-group">
+                <label for="loginPassword">Password:</label>
+                <input type="password" id="loginPassword" required>
+            </div>
+            <button type="submit" id="loginBtn">Login</button>
+        </form>
+        <p>Don't have an account? <a href="#" onclick="showSignupPage()">Sign Up</a></p>
+    </div>
+
+    <div id="transactionsPage" class="container" style="display:none;">
+        <h2>ONIK Bank - Your Transactions</h2>
+        <button onclick="logout()">Logout</button>
+        <div id="transactionsList">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
